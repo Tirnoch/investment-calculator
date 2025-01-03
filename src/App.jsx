@@ -10,12 +10,7 @@ function App() {
     expectedReturn: 6,
     duration: 10,
   });
-  const inputIsValid =
-    userInput.duration > 0 &&
-    userInput.expectedReturn > 0 &&
-    userInput.annualInvestment > 0 &&
-    userInput.initialInvestment > 0;
-
+  const inputIsValid = userInput.duration > 0 && userInput.expectedReturn > 0;
   function handleChange(inputIdentifier, newValue) {
     setuserInput((prevUserInput) => {
       return {
