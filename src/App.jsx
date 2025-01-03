@@ -10,17 +10,15 @@ function App() {
     expectedReturn: 6,
     duration: 10,
   });
-  const inputIsValid =
-    userInput.duration >= 0 &&
-    userInput.expectedReturn >= 0 &&
-    function handleChange(inputIdentifier, newValue) {
-      setuserInput((prevUserInput) => {
-        return {
-          ...prevUserInput,
-          [inputIdentifier]: +newValue,
-        };
-      });
-    };
+  const inputIsValid = userInput.duration >= 0 && userInput.expectedReturn >= 0;
+  function handleChange(inputIdentifier, newValue) {
+    setuserInput((prevUserInput) => {
+      return {
+        ...prevUserInput,
+        [inputIdentifier]: +newValue,
+      };
+    });
+  }
   return (
     <>
       <Header />
